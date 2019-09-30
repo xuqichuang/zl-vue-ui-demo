@@ -1,16 +1,20 @@
 <template>
   <div id="app">
     <keep-alive>
-      <router-view/>
+      <router-view />
     </keep-alive>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
-}
+  name: "App",
+  created() {
+    console.log(this.$route);
+  }
+};
 </script>
 
-<style>
+<style lang="less">
+@import "./assets/less/1px.less";
 </style>

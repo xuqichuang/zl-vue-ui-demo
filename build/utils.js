@@ -47,7 +47,6 @@ exports.cssLoaders = function (options) {
         })
       })
     }
-
     // Extract CSS when that option is specified
     // (which is the case during production build)
     if (options.extract) {
@@ -59,12 +58,33 @@ exports.cssLoaders = function (options) {
       return ['vue-style-loader'].concat(loaders)
     }
   }
-
+  function lessResourceLoader() {
+    var loaders = [
+      cssLoader,
+      'less-loader',
+      {
+        loader: 'sass-resources-loader',
+        options: {
+          resources: [
+              path.resolve(__dirname, '../src/assets/less/index.less'),// 这里的路径即是我们定义全局变量的地方
+          ]
+        }
+      }
+    ];
+    if (options.extract) {
+        return ExtractTextPlugin.extract({
+            use: loaders,
+            fallback: 'vue-style-loader'
+        })
+    } else {
+        return ['vue-style-loader'].concat(loaders)
+    }
+  }
   // https://vue-loader.vuejs.org/en/configurations/extract-css.html
   return {
     css: generateLoaders(),
     postcss: generateLoaders(),
-    less: generateLoaders('less'),
+    less: lessResourceLoader(),
     sass: generateLoaders('sass', { indentedSyntax: true }),
     scss: generateLoaders('sass'),
     stylus: generateLoaders('stylus'),
