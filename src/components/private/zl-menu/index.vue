@@ -2,7 +2,7 @@
   <div class="zl-menu">
     <ul>
       <li v-for="(item, index) in menus" :key="index">
-        <router-link to>{{item.name}}</router-link>
+        <router-link :to="`/components/${item.name}`">{{item.name}}</router-link>
       </li>
     </ul>
   </div>
