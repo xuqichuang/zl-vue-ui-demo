@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="zl-header">
     <div class="left">
       <img src="./img/favicon.png" />
       <span class="title">zl-vue-ui</span>
@@ -44,7 +44,7 @@ export default {
 </script>
 
 <style lang='less' scoped>
-.container {
+.zl-header {
   width: 100%;
   background: @bg-color;
   box-sizing: border-box;
@@ -54,6 +54,8 @@ export default {
   align-items: center;
   justify-content: space-between;
   color: #eee;
+  position: fixed;
+  z-index: 1;
   .left {
     display: flex;
     align-items: center;

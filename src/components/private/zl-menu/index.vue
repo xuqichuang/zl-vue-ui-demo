@@ -33,16 +33,16 @@ export default {
 <style lang='less' scoped>
 .zl-menu {
   position: fixed;
-  min-width: 140px;
-  max-width: 160px;
+  width: 140px;
   background: #fff;
   left: 0;
-  z-index: -1;
-  padding: 25px 0 60px;
+  z-index: 0;
+  top: 40px;
+  padding: 25px 0 30px;
   overflow-y: scroll;
   border-right: 1px solid #f1f4f8;
   box-shadow: 0 8px 12px #ebedf0;
-  height: calc(100% - 120px);
+  height: calc(100% - 90px);
   ul {
     padding: 0 5px 0 10px;
     li {

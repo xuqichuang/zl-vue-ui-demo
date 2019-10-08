@@ -29,4 +29,7 @@ export default {
 </script>
 
 <style lang='less' scoped>
+.zl-main {
+  display: flex;
+}
 </style>
