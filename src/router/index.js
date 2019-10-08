@@ -13,7 +13,6 @@ Vue.use(Router);
 
 export default new Router({
   mode: "history",
-  base: "/zl-vue-ui-demo/dist/",
   routes: [
     {
       path: "/",
