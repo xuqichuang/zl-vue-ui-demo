@@ -1,5 +1,7 @@
 <template>
-  <div class="zl-exhibition"></div>
+  <div class="zl-exhibition">
+    <slot></slot>
+  </div>
 </template>
 
 <script>
@@ -30,5 +32,6 @@ export default {
   border-left: 1px solid #f1f4f8;
   height: calc(100% - 245px);
   border-radius: 5px;
+  z-index: 10000;
 }
 </style>

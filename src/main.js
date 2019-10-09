@@ -7,9 +7,17 @@ import store from "./store";
 import "@/assets/css/reset.css";
 import "@/assets/less/global.less";
 import "lib-flexible/flexible";
-import "@/components/index.js";
 Vue.config.productionTip = false;
+// markdown 编辑器
+import ZlUseage from "components/private/zl-useage";
+import ZlExhibition from "components/private/zl-exhibition";
+import "mavon-editor/dist/css/index.css";
+import mavonEditor from "mavon-editor";
+// use
 
+Vue.use(mavonEditor);
+Vue.component("zl-exhibition", ZlExhibition);
+Vue.component("zl-useage", ZlUseage);
 new Vue({
   el: "#app",
   store,

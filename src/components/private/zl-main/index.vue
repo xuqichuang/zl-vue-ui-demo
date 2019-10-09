@@ -1,8 +1,7 @@
 <template>
   <div class="zl-main">
     <zl-menu />
-    <zl-useage />
-    <zl-exhibition />
+    <router-view></router-view>
   </div>
 </template>
 

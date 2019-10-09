@@ -55,7 +55,7 @@ export default {
   justify-content: space-between;
   color: #eee;
   position: fixed;
-  z-index: 1;
+  z-index: 10000;
   .left {
     display: flex;
     align-items: center;
