@@ -9,14 +9,19 @@
         :subfield="subfield"
       />
     </zl-useage>
-    <zl-exhibition></zl-exhibition>
+    <zl-demo />
   </div>
 </template>
 
 <script>
 import { mapState } from "vuex";
 import readme from "./README.md";
+import ZlUseage from "components/private/zl-useage";
+import ZlDemo from "./demo";
 export default {
+  components: {
+    ZlDemo
+  },
   data() {
     return {
       md: readme

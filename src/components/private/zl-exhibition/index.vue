@@ -1,7 +1,7 @@
 <template>
-  <div class="zl-exhibition">
+  <iframe class="zl-exhibition" src="/exhibition.html">
     <slot></slot>
-  </div>
+  </iframe>
 </template>
 
 <script>
@@ -26,8 +26,7 @@ export default {
   width: 260px;
   background: #fff;
   z-index: 0;
-  top: 80px;
-  padding: 25px 0 30px;
+  top: 110px;
   overflow-y: scroll;
   border-left: 1px solid #f1f4f8;
   height: calc(100% - 245px);

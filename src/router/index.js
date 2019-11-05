@@ -41,6 +41,11 @@ const ZlToast = () => import("views/packages/toast").then(m => m.default); //
 const ZlToastPlugin = () =>
   import("views/packages/toast-plugin").then(m => m.default); //
 
+const ZlUseage = () =>
+  import("components/private/zl-useage").then(m => m.default); //
+const ZlExhibition = () =>
+  import("components/private/zl-exhibition").then(m => m.default); //
+
 Vue.use(Router);
 
 export default new Router({
@@ -54,7 +59,7 @@ export default new Router({
     {
       path: "/introduction",
       name: "介绍",
-      component: Introduction,
+      component: ZlLayout,
       meta: {}
     },
     {
@@ -76,6 +81,14 @@ export default new Router({
       component: ZlLayout,
       meta: {},
       children: [
+        {
+          path: "test",
+          name: "组件",
+          components: {
+            default: ZlUseage,
+            view: ZlExhibition
+          },
+        },
         {
           path: "ZlActionSheet",
           name: "上拉菜单",

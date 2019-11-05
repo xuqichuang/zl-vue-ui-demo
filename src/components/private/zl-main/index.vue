@@ -1,7 +1,8 @@
 <template>
   <div class="zl-main">
     <zl-menu />
-    <router-view></router-view>
+    <router-view />
+    <!-- <router-view name="view" /> -->
   </div>
 </template>
 
