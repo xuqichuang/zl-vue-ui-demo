@@ -22,7 +22,7 @@
     "vue-lottie": "^0.2.1",
     "vue-router": "^3.0.1",
     "vuex": "^3.1.1",
-    "yarn": "^1.17.3",
+    "yarn": "^1.22.0",
     "zl-vue-ui": "file:zl-vue-ui-1.0.26.tgz"
   },
   "devDependencies": {
